@@ -1,6 +1,7 @@
 # todo-list-with-react
 
 Bu basit React Todo uygulaması, kullanıcıların görevleri eklemesine, işaretleme ve silmesine olanak tanır. Aynı zamanda görevleri tamamlanmış ve tamamlanmamış olarak filtreleyebilirsiniz.
+![image](https://github.com/ferhatkplnn/todo-list-with-react/assets/29931637/e873493e-ff50-4e52-b73f-dd93718cb57d)
 
 ## Başlarken
 
