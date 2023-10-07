@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TodoList from "./Components/TodoList";
 import TodoForm from "./Components/TodoForm";
+import "./styles/App.css";
 
 function App() {
     const [todos, setTodos] = useState([]);
@@ -27,25 +28,29 @@ function App() {
         return todos
             .filter((todo) => todo.completed)
             .map((todo, index) => (
-                <div key={index}>{todo.text} - Tamamlandi</div>
+                <div key={index} className="todo completed">
+                    {todo.text} - Tamamlandi
+                </div>
             ));
     };
 
     const listIncompleteTodos = () => {
         return todos
             .filter((todo) => !todo.completed)
-            .map((todo, index) => {
-                <div key={index}>{todo.text} - Tamamlanmadi</div>;
-            });
+            .map((todo, index) => (
+                <div key={index} className="todo incomplete">
+                    {todo.text} - Tamamlanmadi
+                </div>
+            ));
     };
 
     return (
-        <div>
+        <div className="app">
             <h1>Todo List</h1>
 
             <TodoForm addNewTodo={addNewTodo} />
 
-            <div>
+            <div className="filter-buttons">
                 <button onClick={() => setStatus("all")}>Tum Gorevler</button>
                 <button onClick={() => setStatus("completed")}>
                     Tamamlanmis Gorevler

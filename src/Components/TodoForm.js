@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/TodoForm.css";
 
 function TodoForm({ addNewTodo }) {
     const [text, setText] = useState("");
@@ -11,7 +12,7 @@ function TodoForm({ addNewTodo }) {
     };
 
     return (
-        <div>
+        <div className="todo-form">
             <input
                 type="text"
                 placeholder="Yeni bir gorev ekleyin"

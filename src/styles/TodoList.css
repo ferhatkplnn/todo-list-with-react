@@ -1,0 +1,32 @@
+.todo-list {
+    margin-top: 20px;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.todo:hover {
+    background-color: #f2f2f2;
+}
+
+.completed {
+    background-color: #b8e994;
+    text-decoration: line-through;
+}
+
+.incomplete {
+    background-color: #f9ca24;
+}
+
+.btn {
+    margin-left: 5px;
+}

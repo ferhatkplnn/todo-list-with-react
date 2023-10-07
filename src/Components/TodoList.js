@@ -1,13 +1,28 @@
 import React from "react";
+import "../styles/TodoList.css";
 
 function TodoList({ todos, completeTodo, deleteTodo }) {
     return (
-        <div>
+        <div className="todo-list">
             {todos.map((todo, index) => (
-                <div key={index}>
+                <div
+                    key={index}
+                    className={`todo ${
+                        todo.completed ? "completed" : "incomplete"
+                    }`}
+                >
                     {todo.text}
-                    <button onClick={() => completeTodo(index)}>Tamamla</button>
-                    <button onClick={() => deleteTodo(index)}>Sil</button>
+                    <div>
+                        <button onClick={() => completeTodo(index)}>
+                            Tamamla
+                        </button>
+                        <button
+                            className="btn"
+                            onClick={() => deleteTodo(index)}
+                        >
+                            Sil
+                        </button>
+                    </div>
                 </div>
             ))}
         </div>
